@@ -1,0 +1,257 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background-color: #00425A; /* Fondo general de la página */
+  color: #EFF5F5; /* Color de texto general para el body */
+}
+
+header {
+  background-color: #181823; /* Fondo del encabezado */
+  color: #EFF5F5; /* Color del texto del encabezado */
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* --- Estilo del Título Principal --- */
+header h1 {
+  color: #FC7300; /* Color vibrante para el título principal */
+  margin-bottom: 10px;
+  font-size: 3.5em; /* ¡Hacemos la letra mucho más grande! (3.5 veces el tamaño base) */
+  font-weight: bold; /* Hacemos la letra más gruesa */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Añade una sombra sutil para destacarlo */
+}
+
+
+nav {
+  background-color: #1F8A70; /* Fondo de la barra de navegación */
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: #EFF5F5; /* Color de texto de los enlaces de navegación */
+  text-decoration: none;
+  padding: 8px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+nav ul li a:hover {
+  background-color: #FC7300; /* Color de fondo al pasar el mouse en la navegación */
+}
+
+section {
+  padding: 60px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(239, 245, 245, 0.2); /* Borde sutil basado en EFF5F5 */
+  min-height: 400px;
+  scroll-margin-top: 70px;
+  background-color: #00425A; /* Fondo de las secciones principales */
+  color: #EFF5F5; /* Color de texto de las secciones */
+}
+section:nth-child(even) { /* Aplicar un color de fondo diferente a secciones pares para contraste */
+  background-color: #181823; 
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #FC7300; /* Color vibrante para los títulos de sección */
+}
+section h3 {
+  color: #1F8A70; /* Color secundario para subtítulos */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Estilos de formulario */
+form {
+  background-color: #181823; /* Fondo del formulario */
+  color: #EFF5F5; /* Color de texto del formulario */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  max-width: 600px;
+  margin: 40px auto;
+}
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #EFF5F5; /* Color de las etiquetas del formulario */
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #1F8A70; /* Borde de los campos de entrada */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #00425A; /* Fondo de los campos de entrada */
+  color: #EFF5F5; /* Color del texto de entrada */
+}
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+form button {
+  background-color: #FC7300; /* Color del botón de enviar */
+  color: #181823; /* Color de texto del botón */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+form button:hover {
+  background-color: #FF8C1A; /* Un tono un poco más claro para el hover */
+}
+
+/* --- Estilos para las Imágenes (mantener los de antes) --- */
+.section-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.image-left {
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  width: 40%;
+  max-width: 300px;
+}
+.image-right {
+  float: right;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  width: 40%;
+  max-width: 300px;
+}
+.image-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 60%;
+  box-shadow: none;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Media queries para responsividad de imágenes */
+@media (max-width: 768px) {
+  .image-left, .image-right {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      max-width: 400px;
+      display: block;
+  }
+  section {
+      padding: 40px 15px;
+  }
+}
+
+/* --- Estilos para el Footer (Pie de Página) --- */
+footer {
+  background-color: #181823; /* Fondo del footer */
+  color: #EFF5F5; /* Color de texto general del footer */
+  padding: 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+footer h3 {
+  color: #1F8A70; /* Color de los títulos del footer */
+  margin-bottom: 10px;
+}
+
+footer .footer-section {
+  flex: 1;
+  padding: 0 15px;
+  min-width: 200px;
+}
+
+footer .footer-center {
+  text-align: center;
+}
+
+footer .footer-right {
+  text-align: right;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer ul li a {
+  color: #EFF5F5; /* Color de los enlaces del footer */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #FC7300; /* Color al pasar el mouse en los enlaces del footer */
+}
+
+/* Estilos para los íconos de redes sociales */
+.social-icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+/* Media queries para responsividad del footer */
+@media (max-width: 768px) {}
+  footer {
+      flex-direction: column;
+      text-align: center;
+  }
+  footer .footer-section {
+      margin-bottom: 15px;
+      padding: 0 10px;
+      min-width: unset;
+  }
+  footer .footer-left,
+  footer .footer-right {
+      text-align: center;
+  }
